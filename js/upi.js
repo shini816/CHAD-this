@@ -35,26 +35,14 @@ window.initUPI = (amount) => {
     // Note: On web, we can't force a specific app easily without specific schemes (e.g., phonepe://), 
     // but standard upi:// usually lets the OS pick. 
     // Some apps support specific schemes, but standard upi:// is safest.
-    // We will use the same string for all, but users can click the one they prefer mentally.
-    if (linkGeneric) linkGeneric.href = upiString;
-    if (linkGPay) linkGPay.href = upiString; // GPay often intercepts upi://
-    if (linkPhonePe) linkPhonePe.href = upiString;
-    if (linkPaytm) linkPaytm.href = upiString;
-
-    // Toggle UI based on selection
-    const toggleUPI = () => {
-        const selected = document.querySelector('input[name="payment"]:checked').value;
-        if (selected === 'upi') {
-            upiSection.style.display = 'block';
-        } else {
-            upiSection.style.display = 'none';
-        }
+    upiSection.style.display = 'none';
+}
     };
 
-    paymentRadios.forEach(radio => {
-        radio.addEventListener('change', toggleUPI);
-    });
+paymentRadios.forEach(radio => {
+    radio.addEventListener('change', toggleUPI);
+});
 
-    // Initial check
-    toggleUPI();
+// Initial check
+toggleUPI();
 };
