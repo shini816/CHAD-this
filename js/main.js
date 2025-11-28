@@ -26,6 +26,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Cart Click
+    const cartBtn = document.querySelector('.cart-btn');
+    if (cartBtn) {
+        cartBtn.addEventListener('click', () => {
+            // Check if we are in root or pages folder to determine path
+            const isPages = window.location.pathname.includes('/pages/');
+            const path = isPages ? 'checkout.html' : 'pages/checkout.html';
+            window.location.href = path;
+        });
+    }
+
+    // Wishlist Click
+    const wishlistBtn = document.querySelector('button[aria-label="Wishlist"]');
+    if (wishlistBtn) {
+        wishlistBtn.addEventListener('click', () => {
+            alert('Wishlist feature is coming soon!');
+        });
+    }
+
     // Update Cart Count (Mock)
     const updateCartCount = () => {
         const cart = JSON.parse(localStorage.getItem('genesis_cart')) || [];
