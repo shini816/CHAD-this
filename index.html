@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENESIS | Future of Merch</title>
+    <meta name="description" content="GENESIS - A futuristic merch store for the next generation. Clothes, accessories, and more.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navbar will be injected here or statically placed -->
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="index.html" class="logo">GENESIS</a>
+                <div class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="pages/shop.html">Shop</a>
+                    <a href="pages/about.html">About</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="icon-btn" aria-label="Search"><i data-lucide="search"></i></button>
+                    <button class="icon-btn" aria-label="Wishlist"><i data-lucide="heart"></i></button>
+                    <button class="icon-btn cart-btn" aria-label="Cart">
+                        <i data-lucide="shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button class="mobile-menu-btn" aria-label="Menu"><i data-lucide="menu"></i></button>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container hero-content">
+                    <h1 class="hero-title">FUTURE <span class="text-primary">WEAR</span></h1>
+                    <p class="hero-subtitle">Upgrade your reality with the next-gen collection.</p>
+                    <a href="pages/shop.html" class="btn btn-primary">EXPLORE DROPS</a>
+                </div>
+                <div class="hero-visual">
+                    <!-- 3D or Image placeholder -->
+                    <div class="glow-circle"></div>
+                </div>
+            </section>
+
+            <!-- Categories -->
+            <section class="section categories">
+                <div class="container">
+                    <h2 class="section-title">CATEGORIES</h2>
+                    <div class="category-grid">
+                        <a href="pages/shop.html?cat=clothes" class="category-card">
+                            <div class="cat-content">
+                                <h3>CLOTHES</h3>
+                            </div>
+                        </a>
+                        <a href="pages/shop.html?cat=accessories" class="category-card">
+                            <div class="cat-content">
+                                <h3>ACCESSORIES</h3>
+                            </div>
+                        </a>
+                        <a href="pages/shop.html?cat=tech" class="category-card">
+                            <div class="cat-content">
+                                <h3>TECH</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">GENESIS</a>
+                    <p>Defining the future of streetwear and lifestyle.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Shop</h4>
+                    <a href="#">New Arrivals</a>
+                    <a href="#">Best Sellers</a>
+                    <a href="#">Accessories</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <a href="#">FAQ</a>
+                    <a href="#">Shipping</a>
+                    <a href="#">Returns</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i data-lucide="instagram"></i></a>
+                    <a href="#"><i data-lucide="twitter"></i></a>
+                    <a href="#"><i data-lucide="youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GENESIS. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

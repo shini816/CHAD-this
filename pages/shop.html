@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | GENESIS</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .shop-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: var(--spacing-md);
+            padding: var(--spacing-lg) 0;
+        }
+
+        .filters {
+            background-color: var(--color-surface);
+            padding: var(--spacing-md);
+            border: 1px solid var(--color-border);
+            height: fit-content;
+        }
+
+        .filter-group {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .filter-group h3 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-accent);
+        }
+
+        .filter-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+        }
+
+        .filter-option input {
+            margin-right: 10px;
+            accent-color: var(--color-primary);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .product-card {
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-border);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .product-image {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+            background-color: #222;
+        }
+
+        .product-info {
+            padding: var(--spacing-sm);
+        }
+
+        .product-category {
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+            text-transform: uppercase;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+
+        .product-price {
+            color: var(--color-accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .add-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: transparent;
+            border: 1px solid var(--color-primary);
+            color: var(--color-primary);
+            margin-top: var(--spacing-sm);
+            transition: var(--transition);
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .add-btn:hover {
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .shop-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .filters {
+                margin-bottom: var(--spacing-md);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">GENESIS</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-actions">
+                <button class="icon-btn" aria-label="Search"><i data-lucide="search"></i></button>
+                <button class="icon-btn" aria-label="Wishlist"><i data-lucide="heart"></i></button>
+                <button class="icon-btn cart-btn" aria-label="Cart">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Menu"><i data-lucide="menu"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container" style="padding-top: 100px;">
+        <h1 class="section-title">SHOP COLLECTION</h1>
+
+        <div class="shop-layout">
+            <aside class="filters">
+                <div class="filter-group">
+                    <h3>CATEGORY</h3>
+                    <label class="filter-option">
+                        <input type="checkbox" value="clothes" class="cat-filter"> Clothes
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="accessories" class="cat-filter"> Accessories
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="toys" class="cat-filter"> Toys
+                    </label>
+                </div>
+                <div class="filter-group">
+                    <h3>PRICE RANGE</h3>
+                    <label class="filter-option">
+                        <input type="radio" name="price" value="all" checked> All
+                    </label>
+                    <label class="filter-option">
+                        <input type="radio" name="price" value="under-50"> Under $50
+                    </label>
+                    <label class="filter-option">
+                        <input type="radio" name="price" value="50-100"> $50 - $100
+                    </label>
+                    <label class="filter-option">
+                        <input type="radio" name="price" value="over-100"> Over $100
+                    </label>
+                </div>
+            </aside>
+
+            <div class="products-grid" id="products-grid">
+                <!-- Products injected here -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">GENESIS</a>
+                <p>Defining the future of streetwear.</p>
+            </div>
+            <!-- ... same footer content ... -->
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GENESIS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/products.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/shop.js"></script>
+</body>
+
+</html>

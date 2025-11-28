@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | GENESIS</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .product-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            padding: var(--spacing-lg) 0;
+        }
+
+        .product-gallery {
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-border);
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-gallery img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .product-details h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .product-price {
+            font-size: 2rem;
+            color: var(--color-accent);
+            margin-bottom: var(--spacing-md);
+            font-family: var(--font-heading);
+        }
+
+        .product-description {
+            color: var(--color-text-muted);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .variant-group {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .variant-group label {
+            display: block;
+            margin-bottom: var(--spacing-xs);
+            font-weight: bold;
+            color: var(--color-text-muted);
+        }
+
+        .variant-options {
+            display: flex;
+            gap: 10px;
+        }
+
+        .variant-btn {
+            padding: 8px 16px;
+            border: 1px solid var(--color-border);
+            background: var(--color-surface);
+            color: var(--color-text);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .variant-btn:hover,
+        .variant-btn.active {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+            box-shadow: 0 0 10px rgba(106, 0, 255, 0.2);
+        }
+
+        .add-to-cart-section {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .qty-selector {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--color-border);
+        }
+
+        .qty-btn {
+            padding: 10px 15px;
+            font-size: 1.2rem;
+        }
+
+        .qty-input {
+            width: 50px;
+            text-align: center;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .product-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .product-gallery {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">GENESIS</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-actions">
+                <button class="icon-btn" aria-label="Search"><i data-lucide="search"></i></button>
+                <button class="icon-btn" aria-label="Wishlist"><i data-lucide="heart"></i></button>
+                <button class="icon-btn cart-btn" aria-label="Cart">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Menu"><i data-lucide="menu"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container" style="padding-top: 100px;">
+        <div class="product-layout" id="product-container">
+            <!-- Content injected via JS -->
+            <div class="loading">Loading product data...</div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">GENESIS</a>
+                <p>Defining the future of streetwear.</p>
+            </div>
+            <!-- ... same footer content ... -->
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GENESIS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/products.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/product-details.js"></script>
+</body>
+
+</html>
