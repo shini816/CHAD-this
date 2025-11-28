@@ -5,17 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details | GENESIS</title>
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-
     <!-- Styles -->
     <link rel="stylesheet" href="../css/style.css">
     <style>
@@ -134,29 +131,44 @@
         <div class="container nav-container">
             <a href="../index.html" class="logo">GENESIS</a>
             <div class="nav-links">
-                <div class="product-layout" id="product-container">
-                    <!-- Content injected via JS -->
-                    <div class="loading">Loading product data...</div>
-                </div>
-                </main>
+                <a href="../index.html">Home</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-actions">
+                <button class="icon-btn" aria-label="Search"><i data-lucide="search"></i></button>
+                <button class="icon-btn" aria-label="Wishlist"><i data-lucide="heart"></i></button>
+                <a href="checkout.html" class="icon-btn cart-btn" aria-label="Cart">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="mobile-menu-btn" aria-label="Menu"><i data-lucide="menu"></i></button>
+            </div>
+        </div>
+    </nav>
 
-                <footer class="footer">
-                    <div class="container footer-content">
-                        <div class="footer-brand">
-                            <a href="#" class="logo">GENESIS</a>
-                            <p>Defining the future of streetwear.</p>
-                        </div>
-                        <!-- ... same footer content ... -->
-                    </div>
-                    <div class="footer-bottom">
-                        <p>&copy; 2025 GENESIS. All rights reserved.</p>
-                    </div>
-                </footer>
+    <main class="container" style="padding-top: 100px;">
+        <div class="product-layout" id="product-container">
+            <div class="loading">Loading product data...</div>
+        </div>
+    </main>
 
-                <script src="../js/products.js"></script>
-                <script src="../js/cart.js"></script>
-                <script src="../js/main.js"></script>
-                <script src="../js/product-details.js"></script>
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">GENESIS</a>
+                <p>Defining the future of streetwear.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GENESIS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/products.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/product-details.js"></script>
 </body>
 
 </html>

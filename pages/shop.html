@@ -5,17 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop | GENESIS</title>
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-
     <!-- Styles -->
     <link rel="stylesheet" href="../css/style.css">
     <style>
@@ -137,62 +134,62 @@
         <div class="container nav-container">
             <a href="../index.html" class="logo">GENESIS</a>
             <div class="nav-links">
-                <h1 class="section-title">SHOP COLLECTION</h1>
+                <a href="../index.html">Home</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-actions">
+                <button class="icon-btn" aria-label="Search"><i data-lucide="search"></i></button>
+                <button class="icon-btn" aria-label="Wishlist"><i data-lucide="heart"></i></button>
+                <a href="checkout.html" class="icon-btn cart-btn" aria-label="Cart">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="mobile-menu-btn" aria-label="Menu"><i data-lucide="menu"></i></button>
+            </div>
+        </div>
+    </nav>
 
-                <div class="shop-layout">
-                    <aside class="filters">
-                        <div class="filter-group">
-                            <h3>CATEGORY</h3>
-                            <label class="filter-option">
-                                <input type="checkbox" value="clothes" class="cat-filter"> Clothes
-                            </label>
-                            <label class="filter-option">
-                                <input type="checkbox" value="accessories" class="cat-filter"> Accessories
-                            </label>
-                            <label class="filter-option">
-                                <input type="checkbox" value="toys" class="cat-filter"> Toys
-                            </label>
-                        </div>
-                        <div class="filter-group">
-                            <h3>PRICE RANGE</h3>
-                            <label class="filter-option">
-                                <input type="radio" name="price" value="all" checked> All
-                            </label>
-                            <label class="filter-option">
-                                <input type="radio" name="price" value="under-50"> Under $50
-                            </label>
-                            <label class="filter-option">
-                                <input type="radio" name="price" value="50-100"> $50 - $100
-                            </label>
-                            <label class="filter-option">
-                                <input type="radio" name="price" value="over-100"> Over $100
-                            </label>
-                        </div>
-                    </aside>
-
-                    <div class="products-grid" id="products-grid">
-                        <!-- Products injected here -->
-                    </div>
+    <main class="container" style="padding-top: 100px;">
+        <h1 class="section-title">SHOP COLLECTION</h1>
+        <div class="shop-layout">
+            <aside class="filters">
+                <div class="filter-group">
+                    <h3>CATEGORY</h3>
+                    <label class="filter-option"><input type="checkbox" value="clothes" class="cat-filter">
+                        Clothes</label>
+                    <label class="filter-option"><input type="checkbox" value="accessories" class="cat-filter">
+                        Accessories</label>
+                    <label class="filter-option"><input type="checkbox" value="toys" class="cat-filter"> Toys</label>
                 </div>
-                </main>
+                <div class="filter-group">
+                    <h3>PRICE RANGE</h3>
+                    <label class="filter-option"><input type="radio" name="price" value="all" checked> All</label>
+                    <label class="filter-option"><input type="radio" name="price" value="under-50"> Under $50</label>
+                    <label class="filter-option"><input type="radio" name="price" value="50-100"> $50 - $100</label>
+                    <label class="filter-option"><input type="radio" name="price" value="over-100"> Over $100</label>
+                </div>
+            </aside>
+            <div class="products-grid" id="products-grid"></div>
+        </div>
+    </main>
 
-                <footer class="footer">
-                    <div class="container footer-content">
-                        <div class="footer-brand">
-                            <a href="#" class="logo">GENESIS</a>
-                            <p>Defining the future of streetwear.</p>
-                        </div>
-                        <!-- ... same footer content ... -->
-                    </div>
-                    <div class="footer-bottom">
-                        <p>&copy; 2025 GENESIS. All rights reserved.</p>
-                    </div>
-                </footer>
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">GENESIS</a>
+                <p>Defining the future of streetwear.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GENESIS. All rights reserved.</p>
+        </div>
+    </footer>
 
-                <script src="../js/products.js"></script>
-                <script src="../js/cart.js"></script>
-                <script src="../js/main.js"></script>
-                <script src="../js/shop.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/shop.js"></script>
 </body>
 
 </html>

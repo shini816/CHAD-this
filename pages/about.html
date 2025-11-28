@@ -16,6 +16,26 @@
 <body>
     <nav class="navbar">
         <div class="container nav-container">
+            <a href="../index.html" class="logo">GENESIS</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html" class="active">About</a>
+            </div>
+            <div class="nav-actions">
+                <button class="icon-btn" aria-label="Search"><i data-lucide="search"></i></button>
+                <button class="icon-btn" aria-label="Wishlist"><i data-lucide="heart"></i></button>
+                <a href="checkout.html" class="icon-btn cart-btn" aria-label="Cart">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="mobile-menu-btn" aria-label="Menu"><i data-lucide="menu"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container" style="padding-top: 100px;">
+        <section class="section">
             <h1 class="section-title">OUR STORY</h1>
             <div style="max-width: 800px; margin: 0 auto; text-align: center;">
                 <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--color-text-muted);">
@@ -31,11 +51,11 @@
                     <h2 style="color: var(--color-primary);">FUTURE CULTURE</h2>
                 </div>
             </div>
-            </section>
-            </main>
+        </section>
+    </main>
 
-            <script src="../js/main.js"></script>
-            <script src="../js/cart.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
 </body>
 
 </html>
