@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GENESIS | Future of Merch</title>
-    <meta name="description" content="GENESIS - A futuristic merch store for the next generation. Clothes, accessories, and more.">
-    
+    <meta name="description"
+        content="GENESIS - A futuristic merch store for the next generation. Clothes, accessories, and more.">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div id="app">
         <!-- Navbar will be injected here or statically placed -->
@@ -31,10 +36,10 @@
                 <div class="nav-actions">
                     <button class="icon-btn" aria-label="Search"><i data-lucide="search"></i></button>
                     <button class="icon-btn" aria-label="Wishlist"><i data-lucide="heart"></i></button>
-                    <button class="icon-btn cart-btn" aria-label="Cart">
+                    <a href="pages/checkout.html" class="icon-btn cart-btn" aria-label="Cart">
                         <i data-lucide="shopping-bag"></i>
                         <span class="cart-count">0</span>
-                    </button>
+                    </a>
                     <button class="mobile-menu-btn" aria-label="Menu"><i data-lucide="menu"></i></button>
                 </div>
             </div>
@@ -116,4 +121,5 @@
         lucide.createIcons();
     </script>
 </body>
+
 </html>

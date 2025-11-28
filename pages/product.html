@@ -134,46 +134,29 @@
         <div class="container nav-container">
             <a href="../index.html" class="logo">GENESIS</a>
             <div class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="shop.html" class="active">Shop</a>
-                <a href="about.html">About</a>
-            </div>
-            <div class="nav-actions">
-                <button class="icon-btn" aria-label="Search"><i data-lucide="search"></i></button>
-                <button class="icon-btn" aria-label="Wishlist"><i data-lucide="heart"></i></button>
-                <button class="icon-btn cart-btn" aria-label="Cart">
-                    <i data-lucide="shopping-bag"></i>
-                    <span class="cart-count">0</span>
-                </button>
-                <button class="mobile-menu-btn" aria-label="Menu"><i data-lucide="menu"></i></button>
-            </div>
-        </div>
-    </nav>
+                <div class="product-layout" id="product-container">
+                    <!-- Content injected via JS -->
+                    <div class="loading">Loading product data...</div>
+                </div>
+                </main>
 
-    <main class="container" style="padding-top: 100px;">
-        <div class="product-layout" id="product-container">
-            <!-- Content injected via JS -->
-            <div class="loading">Loading product data...</div>
-        </div>
-    </main>
+                <footer class="footer">
+                    <div class="container footer-content">
+                        <div class="footer-brand">
+                            <a href="#" class="logo">GENESIS</a>
+                            <p>Defining the future of streetwear.</p>
+                        </div>
+                        <!-- ... same footer content ... -->
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 GENESIS. All rights reserved.</p>
+                    </div>
+                </footer>
 
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <a href="#" class="logo">GENESIS</a>
-                <p>Defining the future of streetwear.</p>
-            </div>
-            <!-- ... same footer content ... -->
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 GENESIS. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="../js/products.js"></script>
-    <script src="../js/cart.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/product-details.js"></script>
+                <script src="../js/products.js"></script>
+                <script src="../js/cart.js"></script>
+                <script src="../js/main.js"></script>
+                <script src="../js/product-details.js"></script>
 </body>
 
 </html>

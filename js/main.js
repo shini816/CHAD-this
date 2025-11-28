@@ -26,16 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Cart Click
-    const cartBtn = document.querySelector('.cart-btn');
-    if (cartBtn) {
-        cartBtn.addEventListener('click', () => {
-            // Check if we are in root or pages folder to determine path
-            const isPages = window.location.pathname.includes('/pages/');
-            const path = isPages ? 'checkout.html' : 'pages/checkout.html';
-            window.location.href = path;
-        });
-    }
+    // Cart Click - Handled by HTML <a> tag now
 
     // Wishlist Click
     const wishlistBtn = document.querySelector('button[aria-label="Wishlist"]');
