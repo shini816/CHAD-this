@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="product-info">
                     <div class="product-category">${p.category}</div>
                     <h3 class="product-title"><a href="product.html?id=${p.id}">${p.name}</a></h3>
-                    <div class="product-price">$${p.price.toFixed(2)}</div>
+                    <div class="product-price">₹${p.price.toFixed(2)}</div>
                     <button class="add-btn" onclick="addToCart(${p.id})">Add to Cart</button>
                 </div>
             `;

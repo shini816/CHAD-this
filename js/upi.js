@@ -7,14 +7,15 @@ window.initUPI = (amount) => {
     const upiSection = document.getElementById('upi-section');
     const paymentRadios = document.querySelectorAll('input[name="payment"]');
     const qrContainer = document.getElementById('qrcode');
-    const upiLinkBtn = document.getElementById('upi-link');
+
+    // Links
+    const linkGeneric = document.getElementById('upi-link-generic');
+    const linkGPay = document.getElementById('upi-link-gpay');
+    const linkPhonePe = document.getElementById('upi-link-phonepe');
+    const linkPaytm = document.getElementById('upi-link-paytm');
 
     // Generate UPI String
     // Format: upi://pay?pa=<id>&pn=<name>&am=<amount>&cu=INR
-    // Note: Amount must be in INR for most UPI apps. Assuming store prices are USD, 
-    // we might need conversion, but for this demo we'll treat the number as is or assume INR.
-    // Let's assume the store is in USD but we'll just pass the number. 
-    // In a real app, you'd convert USD to INR.
     const upiString = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(PAYEE_NAME)}&am=${amount.toFixed(2)}&cu=INR`;
 
     // Generate QR Code
@@ -30,10 +31,15 @@ window.initUPI = (amount) => {
         });
     }
 
-    // Set Deep Link
-    if (upiLinkBtn) {
-        upiLinkBtn.href = upiString;
-    }
+    // Set Deep Links
+    // Note: On web, we can't force a specific app easily without specific schemes (e.g., phonepe://), 
+    // but standard upi:// usually lets the OS pick. 
+    // Some apps support specific schemes, but standard upi:// is safest.
+    // We will use the same string for all, but users can click the one they prefer mentally.
+    if (linkGeneric) linkGeneric.href = upiString;
+    if (linkGPay) linkGPay.href = upiString; // GPay often intercepts upi://
+    if (linkPhonePe) linkPhonePe.href = upiString;
+    if (linkPaytm) linkPaytm.href = upiString;
 
     // Toggle UI based on selection
     const toggleUPI = () => {

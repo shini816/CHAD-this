@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="product-details">
             <div class="product-category" style="color: var(--color-accent); margin-bottom: 10px;">${product.category.toUpperCase()}</div>
             <h1>${product.name}</h1>
-            <div class="product-price">$${product.price.toFixed(2)}</div>
+            <div class="product-price">₹${product.price.toFixed(2)}</div>
             <p class="product-description">
                 Experience the future with the ${product.name}. Designed for the modern urban explorer, 
                 featuring high-quality materials and a futuristic aesthetic that stands out.

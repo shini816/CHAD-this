@@ -2,7 +2,7 @@ const products = [
     {
         id: 1,
         name: "Cyberpunk Hoodie",
-        price: 89.99,
+        price: 2999,
         category: "clothes",
         image: "https://placehold.co/600x600/1a1a2e/6A00FF?text=Cyberpunk+Hoodie",
         rating: 4.8,
@@ -11,7 +11,7 @@ const products = [
     {
         id: 2,
         name: "Neon Tech Pants",
-        price: 65.00,
+        price: 1999,
         category: "clothes",
         image: "https://placehold.co/600x600/1a1a2e/00F0FF?text=Neon+Pants",
         rating: 4.5,
@@ -20,7 +20,7 @@ const products = [
     {
         id: 3,
         name: "Holo Visor",
-        price: 45.00,
+        price: 999,
         category: "accessories",
         image: "https://placehold.co/600x600/1a1a2e/6A00FF?text=Holo+Visor",
         rating: 4.9,
@@ -29,7 +29,7 @@ const products = [
     {
         id: 4,
         name: "Quantum Sneakers",
-        price: 120.00,
+        price: 4999,
         category: "clothes",
         image: "https://placehold.co/600x600/1a1a2e/00F0FF?text=Quantum+Sneakers",
         rating: 4.7,
@@ -38,7 +38,7 @@ const products = [
     {
         id: 5,
         name: "Mecha Figure",
-        price: 150.00,
+        price: 3499,
         category: "toys",
         image: "https://placehold.co/600x600/1a1a2e/6A00FF?text=Mecha+Figure",
         rating: 5.0,
@@ -47,7 +47,7 @@ const products = [
     {
         id: 6,
         name: "Neural Interface Case",
-        price: 25.00,
+        price: 499,
         category: "accessories",
         image: "https://placehold.co/600x600/1a1a2e/00F0FF?text=Neural+Case",
         rating: 4.2,
