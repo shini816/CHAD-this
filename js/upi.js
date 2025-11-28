@@ -31,18 +31,45 @@ window.initUPI = (amount) => {
         });
     }
 
-    // Set Deep Links
-    // Note: On web, we can't force a specific app easily without specific schemes (e.g., phonepe://), 
-    // but standard upi:// usually lets the OS pick. 
-    // Some apps support specific schemes, but standard upi:// is safest.
-    upiSection.style.display = 'none';
-}
+    // Desktop Handling: Redirect to QR Code
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    const handleDesktopClick = (e) => {
+        if (!isMobile) {
+            e.preventDefault();
+            qrContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Visual cue
+            qrContainer.style.border = "2px solid #6A00FF";
+            qrContainer.style.borderRadius = "10px";
+            qrContainer.style.padding = "10px";
+            setTimeout(() => {
+                qrContainer.style.border = "none";
+                qrContainer.style.padding = "0";
+            }, 2000);
+            alert("On Windows/Desktop, please SCAN the QR code with your mobile app to pay.");
+        }
     };
 
-paymentRadios.forEach(radio => {
-    radio.addEventListener('change', toggleUPI);
-});
+    // Set Deep Links & Listeners
+    if (linkGeneric) { linkGeneric.href = upiString; linkGeneric.addEventListener('click', handleDesktopClick); }
+    if (linkGPay) { linkGPay.href = upiString; linkGPay.addEventListener('click', handleDesktopClick); }
+    if (linkPhonePe) { linkPhonePe.href = upiString; linkPhonePe.addEventListener('click', handleDesktopClick); }
+    if (linkPaytm) { linkPaytm.href = upiString; linkPaytm.addEventListener('click', handleDesktopClick); }
 
-// Initial check
-toggleUPI();
+    // Toggle UI based on selection
+    const toggleUPI = () => {
+        const selected = document.querySelector('input[name="payment"]:checked').value;
+        if (selected === 'upi') {
+            upiSection.style.display = 'block';
+        } else {
+            upiSection.style.display = 'none';
+        }
+    };
+
+    paymentRadios.forEach(radio => {
+        radio.addEventListener('change', toggleUPI);
+    });
+
+    // Initial check
+    toggleUPI();
 };
